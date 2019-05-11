@@ -9,8 +9,8 @@ RUN apt-get install -y \
 
 
 COPY my_csv_reader_new.py .
-COPY breast_cancer.csv .
-CMD ["python3","-u","my_csv_reader_new.py"]
+volume ["c/users/hamid.t/class4-notebook"]
+CMD ["python3","-u","my_csv_reader_new.py","breast_cancer.csv"]
 
 
 
