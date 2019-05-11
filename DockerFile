@@ -1,0 +1,17 @@
+From ubuntu:latest
+
+RUN apt-get update
+RUN apt-get install -y \
+      python3  python3-pandas\
+      python3-numpy python3-scipy  
+       
+      
+
+
+COPY my_csv_reader_new.py .
+COPY breast_cancer.csv .
+CMD ["python3","-u","my_csv_reader_new.py"]
+
+
+
+
